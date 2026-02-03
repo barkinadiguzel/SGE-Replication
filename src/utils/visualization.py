@@ -21,13 +21,3 @@ def plot_group_maps(lengths, groups=8):
         ax.axis("off")
     plt.show()
 
-
-def plot_histogram(values):
-    if isinstance(values, torch.Tensor):
-        values = values.detach().cpu().numpy()
-
-    plt.figure(figsize=(5, 3))
-    plt.hist(values.ravel(), bins=60)
-    plt.xlabel("activation")
-    plt.ylabel("count")
-    plt.show()
